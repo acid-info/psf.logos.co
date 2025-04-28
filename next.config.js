@@ -64,8 +64,8 @@ module.exports = () => {
   const plugins = [withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
     // for static builds
-    // output: 'export',
-    output,
+    output: 'export',
+    // output,
     basePath,
     reactStrictMode: true,
     trailingSlash: false,
