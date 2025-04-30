@@ -2,6 +2,8 @@
 
 A starter template built with **Next.js** and **TailwindCSS**.
 
+You can use `pnpm`, `yarn`, or `npm` to follow the steps below.
+
 ## Getting Started
 
 ### Install dependencies and run the development server
