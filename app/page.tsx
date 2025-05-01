@@ -29,7 +29,11 @@ export default async function Page() {
               target="_blank"
               className="inline-flex h-[34px] items-center border-r border-[#ffffff1a] px-6 py-2"
             >
-              <img className="h-3 w-3" alt="X logo original" src="/x-logo-2023-original-1.svg" />
+              <img
+                className="h-3 w-3 min-w-[12px]"
+                alt="X logo original"
+                src="/x-logo-2023-original-1.svg"
+              />
             </a>
 
             <a href="#form" className="inline-flex h-[34px] items-center px-6 py-2">
