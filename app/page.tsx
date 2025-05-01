@@ -21,13 +21,19 @@ export default async function Page() {
               target="_blank"
               className="inline-flex h-[34px] items-center border-r border-[#ffffff1a] px-6 py-2"
             >
-              <div className="font-label-4 whitespace-nowrap text-white">PAST EVENTS</div>
+              <div
+                data-umami-event="past-events-btn-nav"
+                className="font-label-4 whitespace-nowrap text-white"
+              >
+                PAST EVENTS
+              </div>
             </a>
 
             <a
               href="https://x.com/Logos_network"
               target="_blank"
               className="inline-flex h-[34px] items-center border-r border-[#ffffff1a] px-6 py-2"
+              data-umami-event="past-x-btn-nav"
             >
               <img
                 className="h-3 w-3 min-w-[12px]"
@@ -36,7 +42,11 @@ export default async function Page() {
               />
             </a>
 
-            <a href="#form" className="inline-flex h-[34px] items-center px-6 py-2">
+            <a
+              href="#form"
+              className="inline-flex h-[34px] items-center px-6 py-2"
+              data-umami-event="co-organise-btn-nav"
+            >
               <div className="font-label-4 whitespace-nowrap text-white">CO-ORGANISE</div>
             </a>
           </nav>
@@ -64,7 +74,10 @@ export default async function Page() {
             </div>
 
             <a href="https://lu.ma/psf" target="_blank">
-              <Button className="cursor-pointer bg-transparent p-0 hover:bg-transparent">
+              <Button
+                className="cursor-pointer bg-transparent p-0 hover:bg-transparent"
+                data-umami-event="rsvp-btn-hero"
+              >
                 <span className="inline-block bg-[#0000003d] px-6 py-4 text-[18px] leading-[21.6px] tracking-[-0.76px] text-white backdrop-blur-md hover:bg-[#00000060]">
                   RSVP
                 </span>
