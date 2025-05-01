@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { Metadata } from 'next'
+import Script from 'next/script'
 
 const spaceMono = localFont({
   src: '../public/fonts/SpaceMono-Regular.ttf',
@@ -73,6 +74,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <main className="mb-auto">{children}</main>
         <Footer />
+        <Script
+          strategy="afterInteractive"
+          src="https://umami.bi.status.im/script.js"
+          data-website-id="efcd0186-2adc-41d7-91d3-777cad4536cf"
+          data-domains="psf.logos.co,psf-logos-co.vercel.app"
+          data-do-not-track="true"
+        />
       </body>
     </html>
   )
