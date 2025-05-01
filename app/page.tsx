@@ -56,8 +56,10 @@ export default async function Page() {
             </div>
 
             <a href="https://lu.ma/psf" target="_blank">
-              <Button className="cursor-pointer rounded-none bg-[#0000003d] px-6 py-4 text-white backdrop-blur-md hover:bg-[#00000060]">
-                <span className="text-[18px] leading-[21.6px] tracking-[-0.76px]">RSVP</span>
+              <Button className="cursor-pointer bg-transparent p-0 hover:bg-transparent">
+                <span className="inline-block bg-[#0000003d] px-6 py-4 text-[18px] leading-[21.6px] tracking-[-0.76px] text-white backdrop-blur-md hover:bg-[#00000060]">
+                  RSVP
+                </span>
               </Button>
             </a>
           </div>
