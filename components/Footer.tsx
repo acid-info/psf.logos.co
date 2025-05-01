@@ -67,7 +67,7 @@ export default function Footer() {
       <form
         id="form"
         onSubmit={handleSubmit}
-        className="mx-auto my-[80px] flex w-full max-w-[628px] flex-col items-stretch gap-4 sm:my-[145px] sm:flex-row sm:gap-2"
+        className="mx-auto my-[117px] flex w-full max-w-[628px] flex-col items-stretch gap-2 sm:my-[145px] sm:flex-row"
       >
         <div className="relative flex flex-1 items-center gap-2 border-b border-black p-4">
           <input
@@ -90,7 +90,7 @@ export default function Footer() {
 
         <Button
           type="submit"
-          className="h-full cursor-pointer rounded-none bg-black px-6 py-4 text-white hover:bg-black/80"
+          className="mt-6 h-full w-fit cursor-pointer rounded-none bg-black px-6 py-4 text-white hover:bg-black/80 sm:mt-0"
         >
           <span className="text-sm leading-[16.8px] tracking-[-0.59px]">CO-ORGANISE</span>
         </Button>
@@ -102,9 +102,10 @@ export default function Footer() {
         </p>
       )}
 
-      <div className="flex flex-col items-start gap-6 pt-12 pb-4 sm:flex-row sm:justify-between sm:pt-0">
-        <div className="text-sm leading-[16.8px] tracking-[-0.59px] text-black">
-          PARALLEL SOCIETY FESTIVAL <br />
+      <div className="flex flex-col-reverse items-center gap-[40px] pt-12 pb-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6 sm:pt-0">
+        <div className="text-center text-sm leading-[16.8px] tracking-[-0.59px] text-black sm:text-left">
+          PARALLEL SOCIETY FESTIVAL
+          <br />
           2026
         </div>
 
@@ -128,7 +129,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="text-right text-sm leading-[16.8px] tracking-[-0.59px] text-black">
+        <div className="text-center text-sm leading-[16.8px] tracking-[-0.59px] text-black sm:text-right">
           BUILT BY{' '}
           <a className="underline" href="https://free.technology/" target="_blank">
             IFT

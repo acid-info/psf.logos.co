@@ -45,16 +45,20 @@ export default async function Page() {
             COMING Q1 2026
           </div>
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-12 p-4">
-            <img className="h-[75.45px] w-[72.81px]" alt="Subtract" src="/subtract.svg" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-[32px] px-6 sm:gap-12">
+            <img
+              className="h-[51.45px] w-[49.65px] sm:h-[75.45px] sm:w-[72.81px]"
+              alt="Subtract"
+              src="/subtract.svg"
+            />
 
             <img
-              className="h-[125.48px] w-[706.82px]"
+              className="h-auto w-[706.82px]"
               alt="Parallel society"
               src="/parallel-society-festival.svg"
             />
 
-            <div className="w-fit text-center text-xl leading-[24.0px] tracking-[-0.84px] text-white">
+            <div className="w-fit text-center text-base leading-[19px] tracking-[-0.84px] text-white sm:text-xl sm:leading-[24.0px]">
               THE FLAGSHIP EVENT <br />
               OF THE NETWORK STATE MOVEMENT
             </div>
