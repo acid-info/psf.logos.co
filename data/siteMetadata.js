@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Logos Next Tailwind Template',
-  description: '',
+  title: 'Parallel Society Festival',
+  description: 'The Flagship Event of the Network State Movement',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://logos.co',

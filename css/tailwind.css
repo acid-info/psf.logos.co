@@ -7,7 +7,8 @@
 /* Core theme configuration */
 @theme {
   /* Font families */
-  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+  --font-sans:
+    var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
   /* Colors */
@@ -146,30 +147,26 @@
   scrollbar-width: none; /* Firefox */
 }
 
-/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
-  transition:
-    background-color 600000s 0s,
-    color 600000s 0s;
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
-.katex-display {
-  overflow: auto hidden;
+.font-label-4 {
+  font-size: 12px;
+  line-height: 120%;
 }
 
-.content-header-link {
-  opacity: 0;
-  margin-left: -24px;
-  padding-right: 4px;
+/* Default: Space Mono everywhere */
+html {
+  font-family: var(--font-space-mono);
 }
 
-.content-header:hover .content-header-link,
-.content-header-link:hover {
-  opacity: 1;
-}
-
-.linkicon {
-  display: inline-block;
-  vertical-align: middle;
+/* Override: Space Grotesk only for buttons */
+button,
+.font-grotesk {
+  font-family: var(--font-space-grotesk);
 }
