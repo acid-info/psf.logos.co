@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-library 'status-jenkins-lib@v1.9.22'
+library 'status-jenkins-lib@v1.9.16'
 
 pipeline {
   agent { label 'linux' }
@@ -14,6 +14,7 @@ pipeline {
   }
 
   environment {
+    NEXT_PUBLIC_SITE_URL = "https://${env.JOB_BASE_NAME}"
     GIT_COMMITTER_NAME = 'status-im-auto'
     GIT_COMMITTER_EMAIL = 'auto@status.im'
   }
@@ -21,15 +22,17 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        sh 'yarn install'
+        script {
+          nix.develop('yarn install')
+        }
       }
     }
 
     stage('Build') {
       steps {
         script {
-          sh 'yarn build'
-          jenkins.genBuildMetaJSON('build/build.json')
+          nix.develop('yarn build')
+          jenkins.genBuildMetaJSON('out/build.json')
         }
       }
     }
@@ -37,13 +40,15 @@ pipeline {
     stage('Publish') {
       steps {
         sshagent(credentials: ['status-im-auto-ssh']) {
-          sh """
-            ghp-import \
-              -b ${deployBranch()} \
-              -c ${deployDomain()} \
-              -p build
-          """
-         }
+          script {
+            nix.develop("""
+              ghp-import \
+                -b ${deployBranch()} \
+                -c ${deployDomain()} \
+                -p out
+            """, pure: false)
+          }
+        }
       }
     }
   }
