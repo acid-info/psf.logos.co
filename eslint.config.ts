@@ -40,7 +40,6 @@ const config: Linter.FlatConfig[] = [
       semi: ['warn', 'never'],
       indent: ['warn', 2],
 
-      // ✅ make sure prettier plugin is registered before using its rules
       '@next/next/no-img-element': 'off',
 
       'react/react-in-jsx-scope': 'off',

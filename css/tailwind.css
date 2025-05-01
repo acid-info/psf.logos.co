@@ -4,6 +4,8 @@
 @source '../node_modules/pliny';
 @custom-variant dark (&:where(.dark, .dark *));
 
+@import 'tailwindcss/preflight.css' layer(base);
+
 /* Core theme configuration */
 @theme {
   /* Font families */
@@ -169,4 +171,13 @@ html {
 button,
 .font-grotesk {
   font-family: var(--font-space-grotesk);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: 0;
 }

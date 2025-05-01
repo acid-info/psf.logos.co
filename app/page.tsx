@@ -4,7 +4,7 @@ export default async function Page() {
   return (
     <div className="relative flex flex-col items-start bg-white">
       <section className="relative h-screen w-full bg-black">
-        <div className="relative h-screen w-full overflow-hidden">
+        <div className="relative h-screen w-screen overflow-hidden">
           <video
             className="absolute z-0 h-full w-full scale-[1.1] object-cover blur-[22px] filter"
             src="/hero-video.mp4"
