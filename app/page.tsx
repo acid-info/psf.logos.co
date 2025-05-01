@@ -15,7 +15,7 @@ export default async function Page() {
             poster="/hero-image.png"
           />
 
-          <nav className="absolute top-2 left-1/2 z-10 inline-flex h-11 -translate-x-1/2 items-center rounded-[40px] bg-[#00000033] backdrop-blur-[16.5px]">
+          <nav className="absolute top-2 left-1/2 z-10 inline-flex h-11 -translate-x-1/2 items-center bg-[#00000033] backdrop-blur-[16.5px]">
             <a
               href="https://psc.logos.co/"
               target="_blank"
