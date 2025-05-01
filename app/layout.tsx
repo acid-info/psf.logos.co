@@ -27,17 +27,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
-    url: './',
+    url: 'https://psf.logos.co/',
     siteName: siteMetadata.title,
-    images: [siteMetadata.socialBanner],
+    images: [
+      {
+        url: 'https://psf.logos.co/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Parallel Society Festival',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
   alternates: {
     canonical: './',
-    types: {
-      'application/rss+xml': `${siteMetadata.siteUrl}/feed.xml`,
-    },
   },
   robots: {
     index: true,
@@ -58,19 +62,17 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const basePath = process.env.BASE_PATH || ''
-
   return (
     <html
       lang={siteMetadata.language}
       className={`scroll-smooth ${spaceMono.className} ${spaceGrotesk.className}`}
       suppressHydrationWarning
     >
-      <link rel="apple-touch-icon" sizes="76x76" href={`${basePath}/static/favicon.ico`} />
+      <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <main className="mb-auto">{children}</main>
         <Footer />
