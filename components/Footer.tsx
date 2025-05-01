@@ -73,7 +73,7 @@ export default function Footer() {
           <input
             value={formState.name}
             onChange={(e) => setFormState((prev) => ({ ...prev, name: e.target.value }))}
-            className="h-auto w-full border-none p-0 text-sm leading-[16.8px] font-normal tracking-[-0.59px] text-black opacity-60"
+            className="h-auto w-full border-none p-0 text-sm leading-[16.8px] tracking-[-0.59px] text-black opacity-60"
             placeholder="NAME"
           />
         </div>
@@ -82,7 +82,7 @@ export default function Footer() {
           <input
             value={formState.email}
             onChange={(e) => setFormState((prev) => ({ ...prev, email: e.target.value }))}
-            className="h-auto w-full border-none p-0 text-sm leading-[16.8px] font-normal tracking-[-0.59px] text-black opacity-60"
+            className="h-auto w-full border-none p-0 text-sm leading-[16.8px] tracking-[-0.59px] text-black opacity-60"
             placeholder="EMAIL"
             type="email"
           />
@@ -92,9 +92,7 @@ export default function Footer() {
           type="submit"
           className="h-full cursor-pointer rounded-none bg-black px-6 py-4 text-white hover:bg-black/80"
         >
-          <span className="text-sm leading-[16.8px] font-normal tracking-[-0.59px]">
-            CO-ORGANISE
-          </span>
+          <span className="text-sm leading-[16.8px] tracking-[-0.59px]">CO-ORGANISE</span>
         </Button>
       </form>
 
@@ -105,24 +103,32 @@ export default function Footer() {
       )}
 
       <div className="flex flex-col items-start gap-6 pt-12 pb-4 sm:flex-row sm:justify-between sm:pt-0">
-        <div className="text-sm leading-[16.8px] font-normal tracking-[-0.59px] text-black">
+        <div className="text-sm leading-[16.8px] tracking-[-0.59px] text-black">
           PARALLEL SOCIETY FESTIVAL <br />
           2026
         </div>
 
-        <div className="text-sm leading-[16.8px] font-normal tracking-[-0.59px] text-black">
-          <a href="https://logos.co/terms" target="_blank" className="block">
+        <div className="text-sm leading-[16.8px] tracking-[-0.59px] text-black">
+          <a href="https://logos.co/terms" target="_blank" className="block text-center">
             TERMS OF USE
           </a>
-          <a href="https://logos.co/privacy-policy" target="_blank" className="block">
+          <a
+            href="https://logos.co/privacy-policy"
+            target="_blank"
+            className="block text-center text-black"
+          >
             PRIVACY POLICY
           </a>
-          <a href="https://logos.co/security" target="_blank" className="block">
+          <a
+            href="https://logos.co/security"
+            target="_blank"
+            className="block text-center text-black"
+          >
             SECURITY
           </a>
         </div>
 
-        <div className="text-sm leading-[16.8px] font-normal tracking-[-0.59px] text-black">
+        <div className="text-sm leading-[16.8px] tracking-[-0.59px] text-black">
           BUILT BY{' '}
           <a className="underline" href="https://free.technology/" target="_blank">
             IFT

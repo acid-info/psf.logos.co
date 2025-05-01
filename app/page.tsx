@@ -37,7 +37,7 @@ export default async function Page() {
             </a>
           </nav>
 
-          <div className="absolute bottom-[25px] left-1/2 h-[17px] -translate-x-1/2 text-center text-sm leading-[16.8px] font-normal tracking-[-0.59px] whitespace-nowrap text-white">
+          <div className="absolute bottom-[25px] left-1/2 h-[17px] -translate-x-1/2 text-center text-sm leading-[16.8px] tracking-[-0.59px] whitespace-nowrap text-white">
             COMING Q1 2026
           </div>
 
@@ -50,16 +50,14 @@ export default async function Page() {
               src="/parallel-society-festival.svg"
             />
 
-            <div className="w-fit text-center text-xl leading-[24.0px] font-normal tracking-[-0.84px] text-white">
+            <div className="w-fit text-center text-xl leading-[24.0px] tracking-[-0.84px] text-white">
               THE FLAGSHIP EVENT <br />
               OF THE NETWORK STATE MOVEMENT
             </div>
 
             <a href="https://lu.ma/psf" target="_blank">
               <Button className="cursor-pointer rounded-none bg-[#0000003d] px-6 py-4 text-white backdrop-blur-md hover:bg-[#00000060]">
-                <span className="font-['Space_Grotesk',Helvetica] text-lg leading-[21.6px] font-normal tracking-[-0.76px]">
-                  RSVP
-                </span>
+                <span className="text-[18px] leading-[21.6px] tracking-[-0.76px]">RSVP</span>
               </Button>
             </a>
           </div>
