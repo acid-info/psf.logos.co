@@ -128,7 +128,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="text-sm leading-[16.8px] tracking-[-0.59px] text-black">
+        <div className="text-right text-sm leading-[16.8px] tracking-[-0.59px] text-black">
           BUILT BY{' '}
           <a className="underline" href="https://free.technology/" target="_blank">
             IFT
