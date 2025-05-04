@@ -2,11 +2,11 @@ import { Button } from '@/components/ui/button'
 
 export default async function Page() {
   return (
-    <div className="relative flex flex-col items-start bg-white">
-      <section className="relative h-screen w-full bg-black">
-        <div className="relative h-screen w-screen overflow-hidden">
+    <div className="flex min-h-screen flex-col bg-white">
+      <section className="h-screen w-full bg-black">
+        <div className="relative flex h-full w-full flex-col items-center overflow-hidden pt-2">
           <video
-            className="absolute z-0 h-full w-full scale-[1.1] object-cover blur-[22px] filter"
+            className="absolute inset-0 z-0 h-full w-full scale-[1.1] object-cover blur-[22px] filter"
             src="/hero-video.mp4"
             autoPlay
             muted
@@ -15,7 +15,7 @@ export default async function Page() {
             poster="/hero-image.png"
           />
 
-          <nav className="absolute top-2 left-1/2 z-10 inline-flex h-11 -translate-x-1/2 items-center bg-[#00000033] backdrop-blur-[16.5px]">
+          <nav className="relative inline-flex h-11 items-center bg-[#00000033] backdrop-blur-[16.5px]">
             <a
               href="https://psc.logos.co/"
               target="_blank"
@@ -47,38 +47,43 @@ export default async function Page() {
             </a>
           </nav>
 
-          <div className="absolute bottom-[25px] left-1/2 h-[17px] -translate-x-1/2 text-center text-sm leading-[16.8px] tracking-[-0.59px] whitespace-nowrap text-white">
-            COMING Q1 2026
-          </div>
+          <div className="flex flex-1 flex-col items-center sm:justify-between">
+            <div className="flex flex-1 flex-col items-center justify-center sm:gap-12">
+              <div className="relative mt-auto flex flex-col items-center gap-[32px] px-6 sm:mt-0 sm:gap-12">
+                <img
+                  className="h-[51.45px] w-[49.65px] sm:h-[75.45px] sm:w-[72.81px]"
+                  alt="Subtract"
+                  src="/subtract.svg"
+                />
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-[32px] px-6 sm:gap-12">
-            <img
-              className="h-[51.45px] w-[49.65px] sm:h-[75.45px] sm:w-[72.81px]"
-              alt="Subtract"
-              src="/subtract.svg"
-            />
+                <img
+                  className="h-auto w-[706.82px]"
+                  alt="Parallel society"
+                  src="/parallel-society-festival.svg"
+                />
 
-            <img
-              className="h-auto w-[706.82px]"
-              alt="Parallel society"
-              src="/parallel-society-festival.svg"
-            />
+                <div className="w-fit text-center text-base leading-[19px] tracking-[-0.84px] text-white sm:text-xl sm:leading-[24.0px]">
+                  THE FLAGSHIP EVENT <br />
+                  OF THE NETWORK STATE MOVEMENT
+                </div>
+              </div>
 
-            <div className="w-fit text-center text-base leading-[19px] tracking-[-0.84px] text-white sm:text-xl sm:leading-[24.0px]">
-              THE FLAGSHIP EVENT <br />
-              OF THE NETWORK STATE MOVEMENT
+              <div className="relative mt-auto sm:mt-0">
+                <a href="https://lu.ma/psf" target="_blank" data-umami-event="rsvp-btn-hero">
+                  <button className="cursor-pointer bg-[#0000003d] px-6 py-4 backdrop-blur-md hover:bg-[#00000060]">
+                    <span className="inline-block text-[18px] leading-[21.6px] tracking-[-0.76px] text-white">
+                      RSVP
+                    </span>
+                  </button>
+                </a>
+              </div>
             </div>
 
-            <a href="https://lu.ma/psf" target="_blank">
-              <Button
-                className="cursor-pointer bg-transparent p-0 hover:bg-transparent"
-                data-umami-event="rsvp-btn-hero"
-              >
-                <span className="inline-block bg-[#0000003d] px-6 py-4 text-[18px] leading-[21.6px] tracking-[-0.76px] text-white backdrop-blur-md hover:bg-[#00000060]">
-                  RSVP
-                </span>
-              </Button>
-            </a>
+            <div className="relative mt-[32px] mb-6 sm:mt-0">
+              <div className="h-[17px] text-center text-sm leading-[16.8px] tracking-[-0.59px] whitespace-nowrap text-white">
+                COMING Q1 2026
+              </div>
+            </div>
           </div>
         </div>
       </section>
