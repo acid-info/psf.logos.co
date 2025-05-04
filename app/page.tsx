@@ -20,20 +20,16 @@ export default async function Page() {
               href="https://psc.logos.co/"
               target="_blank"
               className="inline-flex h-[34px] items-center border-r border-[#ffffff1a] px-6 py-2"
+              data-umami-event="past-events-btn-nav"
             >
-              <div
-                data-umami-event="past-events-btn-nav"
-                className="font-label-4 whitespace-nowrap text-white"
-              >
-                PAST EVENTS
-              </div>
+              <div className="font-label-4 whitespace-nowrap text-white">PAST EVENTS</div>
             </a>
 
             <a
               href="https://x.com/Logos_network"
               target="_blank"
               className="inline-flex h-[34px] items-center border-r border-[#ffffff1a] px-6 py-2"
-              data-umami-event="past-x-btn-nav"
+              data-umami-event="x-btn-nav"
             >
               <img
                 className="h-3 w-3 min-w-[12px]"
