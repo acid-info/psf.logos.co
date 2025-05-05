@@ -91,7 +91,9 @@ export default function Footer() {
         <Button
           type="submit"
           className="mt-6 h-full w-fit cursor-pointer rounded-none bg-black px-6 py-4 text-white hover:bg-black/80 sm:mt-0"
-          data-umami-event="co-organise-btn-footer"
+          data-umami-event="co-organise"
+          data-umami-event-section="footer"
+          data-umami-event-element="button"
         >
           <span className="text-sm leading-[16.8px] tracking-[-0.59px]">CO-ORGANISE</span>
         </Button>
