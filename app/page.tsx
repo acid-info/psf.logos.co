@@ -20,7 +20,9 @@ export default async function Page() {
               href="https://psc.logos.co/"
               target="_blank"
               className="inline-flex h-[34px] items-center border-r border-[#ffffff1a] px-6 py-2"
-              data-umami-event="past-events-btn-nav"
+              data-umami-event="past-events"
+              data-umami-event-section="navbar"
+              data-umami-event-element="button"
             >
               <div className="font-label-4 whitespace-nowrap text-white">PAST EVENTS</div>
             </a>
@@ -29,7 +31,9 @@ export default async function Page() {
               href="https://x.com/Logos_network"
               target="_blank"
               className="inline-flex h-[34px] items-center border-r border-[#ffffff1a] px-6 py-2"
-              data-umami-event="x-btn-nav"
+              data-umami-event="x"
+              data-umami-event-section="navbar"
+              data-umami-event-element="button"
             >
               <img
                 className="h-3 w-3 min-w-[12px]"
@@ -41,7 +45,9 @@ export default async function Page() {
             <a
               href="#form"
               className="inline-flex h-[34px] items-center px-6 py-2"
-              data-umami-event="co-organise-btn-nav"
+              data-umami-event="co-organise"
+              data-umami-event-section="navbar"
+              data-umami-event-element="button"
             >
               <div className="font-label-4 whitespace-nowrap text-white">CO-ORGANISE</div>
             </a>
@@ -69,7 +75,13 @@ export default async function Page() {
               </div>
 
               <div className="relative mt-auto sm:mt-0">
-                <a href="https://lu.ma/psf" target="_blank" data-umami-event="rsvp-btn-hero">
+                <a
+                  href="https://lu.ma/psf"
+                  target="_blank"
+                  data-umami-event="rsvp"
+                  data-umami-event-section="hero"
+                  data-umami-event-element="button"
+                >
                   <button className="cursor-pointer bg-[#0000003d] px-6 py-4 backdrop-blur-md hover:bg-[#00000060]">
                     <span className="inline-block text-[18px] leading-[21.6px] tracking-[-0.76px] text-white">
                       RSVP
