@@ -81,7 +81,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://umami.bi.status.im/script.js"
           data-website-id="efcd0186-2adc-41d7-91d3-777cad4536cf"
           data-domains="psf.logos.co"
-          data-do-not-track="true"
         />
       </body>
     </html>
