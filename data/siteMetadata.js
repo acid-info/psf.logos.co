@@ -7,7 +7,6 @@ const siteMetadata = {
   siteUrl: 'https://logos.co',
   siteLogo: 'https://psf.logos.co/symbol.svg',
   socialBanner: 'https://psf.logos.co/og.png',
-  email: 'address@yoursite.com',
   locale: 'en-US',
 }
 
