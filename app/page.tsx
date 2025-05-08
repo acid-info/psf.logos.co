@@ -4,7 +4,7 @@ export default async function Page() {
       <section className="h-screen w-full bg-black">
         <div className="relative flex h-full w-full flex-col items-center overflow-hidden pt-2">
           <img
-            className="absolute inset-0 z-0 m-auto object-cover blur-[22px] filter"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover blur-[22px] filter"
             src="/flower.png"
             alt="Hero Image"
           />
