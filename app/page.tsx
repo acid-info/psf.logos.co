@@ -3,7 +3,13 @@ export default async function Page() {
     <div className="flex min-h-screen flex-col bg-white">
       <section className="h-screen w-full bg-black">
         <div className="relative flex h-full w-full flex-col items-center overflow-hidden pt-2">
-          <video
+          <img
+            className="absolute inset-0 z-0 m-auto object-cover blur-[22px] filter"
+            src="/flower.png"
+            alt="Hero Image"
+          />
+
+          {/* <video
             className="absolute inset-0 z-0 h-full w-full scale-[1.1] object-cover blur-[22px] filter"
             src="/hero-video.mp4"
             autoPlay
@@ -11,7 +17,7 @@ export default async function Page() {
             loop
             playsInline
             poster="/hero-image.png"
-          />
+          /> */}
 
           <nav className="relative inline-flex h-11 items-center bg-[#00000033] backdrop-blur-[16.5px]">
             <a
