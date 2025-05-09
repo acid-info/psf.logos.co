@@ -48,8 +48,8 @@ export default function Page() {
           </nav>
 
           <div className="z-10 flex flex-1 flex-col items-center sm:justify-between">
-            <div className="flex flex-1 flex-col items-center justify-center sm:gap-12">
-              <div className="relative mt-auto flex flex-col items-center gap-[32px] px-6 sm:mt-0 sm:gap-12">
+            <div className="flex flex-1 flex-col items-center justify-center sm:gap-10">
+              <div className="relative mt-auto flex flex-col items-center gap-[32px] px-6 sm:mt-0 sm:gap-10">
                 <img
                   className="h-[51.45px] w-[49.65px] sm:h-[75.45px] sm:w-[72.81px]"
                   alt="Subtract"
