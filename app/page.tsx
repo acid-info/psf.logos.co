@@ -8,17 +8,6 @@ export default async function Page() {
             src="/flower.png"
             alt="Hero Image"
           />
-
-          {/* <video
-            className="absolute inset-0 z-0 h-full w-full scale-[1.1] object-cover blur-[22px] filter"
-            src="/hero-video.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/hero-image.png"
-          /> */}
-
           <nav className="relative inline-flex h-11 items-center bg-[#00000033] backdrop-blur-[16.5px]">
             <a
               href="https://psc.logos.co/"
