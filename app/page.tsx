@@ -1,14 +1,15 @@
-export default async function Page() {
+'use client'
+
+import SpotlightBackground from '../components/ui/SpotlightBackground'
+
+export default function Page() {
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <section className="h-screen w-full bg-black">
         <div className="relative flex h-full w-full flex-col items-center overflow-hidden pt-2">
-          <img
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover filter"
-            src="/flower.png"
-            alt="Hero Image"
-          />
-          <nav className="relative inline-flex h-11 items-center bg-[#00000033] backdrop-blur-[16.5px]">
+          <SpotlightBackground />
+
+          <nav className="relative z-10 inline-flex h-11 items-center bg-[#00000033] backdrop-blur-[16.5px]">
             <a
               href="https://psc.logos.co/"
               target="_blank"
@@ -46,7 +47,7 @@ export default async function Page() {
             </a>
           </nav>
 
-          <div className="flex flex-1 flex-col items-center sm:justify-between">
+          <div className="z-10 flex flex-1 flex-col items-center sm:justify-between">
             <div className="flex flex-1 flex-col items-center justify-center sm:gap-12">
               <div className="relative mt-auto flex flex-col items-center gap-[32px] px-6 sm:mt-0 sm:gap-12">
                 <img
