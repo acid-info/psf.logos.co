@@ -76,8 +76,8 @@ export default function Page() {
                   data-umami-event-section="hero"
                   data-umami-event-element="button"
                 >
-                  <button className="cursor-pointer bg-[#0000003d] px-6 py-4 backdrop-blur-md hover:bg-[#00000060]">
-                    <span className="inline-block text-[18px] leading-[21.6px] tracking-[-0.76px] text-white">
+                  <button className="cursor-pointer bg-[#FFF] px-6 py-4 hover:bg-[#F2F2F2]">
+                    <span className="inline-block text-[18px] leading-[21.6px] tracking-[-0.76px] text-black">
                       RSVP
                     </span>
                   </button>
