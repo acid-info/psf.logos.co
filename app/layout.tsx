@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`scroll-smooth ${spaceMono.className} ${spaceGrotesk.className}`}
+      className={`scroll-smooth ${spaceMono.className} ${spaceGrotesk.className} antialiased`}
       suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico" />
