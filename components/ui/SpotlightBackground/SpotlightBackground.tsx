@@ -10,7 +10,7 @@ export default function SpotlightBackground() {
   const [isInBounds, setIsInBounds] = useState(false)
 
   // Constants
-  const MAX_OFFSET = 100
+  const MAX_OFFSET = 160
   const OFFSCREEN_COORD = -9999
 
   // Constants for transition duration
@@ -62,7 +62,7 @@ export default function SpotlightBackground() {
   return (
     <div ref={containerRef} className="absolute inset-0 overflow-hidden">
       <img
-        className="pointer-events-none absolute top-1/2 left-1/2 h-[120%] w-[120%] object-cover blur-lg"
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[120%] w-[120%] object-cover blur-xl"
         style={blurredStyle}
         src="/flower.png"
         alt="Hero Image Blurred"
