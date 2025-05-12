@@ -1,7 +1,6 @@
 'use client'
 
 import HeroBackground from '../components/ui/HeroBackground/HeroBackground'
-import MobileHeroBackground from '../components/ui/HeroBackground/MobileHeroBackground'
 import { useIsMobile } from '../hooks/useIsMobile'
 
 const MOBILE_BREAKPOINT = 769
@@ -10,10 +9,10 @@ export default function Page() {
   const isMobile = useIsMobile(MOBILE_BREAKPOINT)
 
   return (
-    <div className="flex h-[100dvh] w-screen flex-col bg-white">
+    <div className="flex h-[100dvh] w-[100dvw] flex-col bg-white">
       <section className="h-full w-full bg-black">
         <div className="relative flex h-full w-full flex-col items-center overflow-hidden pt-2">
-          {isMobile ? <MobileHeroBackground /> : <HeroBackground />}
+          <HeroBackground isMobile={isMobile} />
 
           <nav className="relative z-10 inline-flex h-11 items-center bg-[#00000033] backdrop-blur-[16.5px]">
             <a

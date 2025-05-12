@@ -73,8 +73,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
-      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
-        <main className="mb-auto">{children}</main>
+      <body className="bg-white text-black dark:bg-gray-950 dark:text-white">
+        <main>{children}</main>
         <Footer />
         <Script
           strategy="afterInteractive"
