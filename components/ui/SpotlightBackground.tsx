@@ -8,14 +8,21 @@ export default function SpotlightBackground() {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
   const [isInBounds, setIsInBounds] = useState(false)
 
-  const [radius, setRadius] = useState(120)
+  // Constants for radius values
+  const INNER_RADIUS = 180
+  const MAX_FADE = 80
+  const MAX_OFFSET = 100
+  const OFFSCREEN_COORD = -9999
+  const MOUSE_IDLE_TIMEOUT = 300
+  const SHRINK_ANIMATION_DURATION = 300
+
+  // Constants for transition duration
+  const QUICK_TRANSITION = '0.1s'
+  const SLOW_TRANSITION = '0.5s'
+
+  const [radius, setRadius] = useState(INNER_RADIUS)
   const shrinkTimeout = useRef<NodeJS.Timeout | undefined>(undefined)
   const animFrame = useRef<number | undefined>(undefined)
-
-  const INNER_RADIUS = 120
-  const OUTER_RADIUS = 150
-  const MAX_FADE = OUTER_RADIUS - INNER_RADIUS
-  const MAX_OFFSET = 30
 
   useEffect(() => {
     if (containerRef.current) {
@@ -71,14 +78,13 @@ export default function SpotlightBackground() {
       const startR = radius
       const startTime = performance.now()
       animateRadiusShrink(startTime, startR)
-    }, 300)
+    }, MOUSE_IDLE_TIMEOUT)
   }
 
   const animateRadiusShrink = (startTime: number, startR: number) => {
     const now = performance.now()
     const elapsed = now - startTime
-    const duration = 150
-    const progress = Math.min(elapsed / duration, 1)
+    const progress = Math.min(elapsed / SHRINK_ANIMATION_DURATION, 1)
 
     const easedProgress = progress * progress * progress
 
@@ -90,11 +96,11 @@ export default function SpotlightBackground() {
   }
 
   const offsetX =
-    isInBounds && coords.x !== -9999 && dimensions.width
+    isInBounds && coords.x !== OFFSCREEN_COORD && dimensions.width
       ? (coords.x / dimensions.width - 0.5) * MAX_OFFSET
       : 0
   const offsetY =
-    isInBounds && coords.y !== -9999 && dimensions.height
+    isInBounds && coords.y !== OFFSCREEN_COORD && dimensions.height
       ? (coords.y / dimensions.height - 0.5) * MAX_OFFSET
       : 0
 
@@ -103,12 +109,16 @@ export default function SpotlightBackground() {
 
   const blurredStyle = {
     transform: `translate(-50%, -50%) translate(${offsetX}px, ${offsetY}px)`,
-    transition: isInBounds ? 'transform 0.1s ease-out' : 'transform 0.5s ease-out',
+    transition: isInBounds
+      ? `transform ${QUICK_TRANSITION} ease-out`
+      : `transform ${SLOW_TRANSITION} ease-out`,
   }
 
   const sharpStyle = {
     transform: `translate(-50%, -50%) translate(${offsetX}px, ${offsetY}px)`,
-    transition: isInBounds ? 'transform 0.1s ease-out' : 'transform 0.5s ease-out',
+    transition: isInBounds
+      ? `transform ${QUICK_TRANSITION} ease-out`
+      : `transform ${SLOW_TRANSITION} ease-out`,
   }
 
   const maskStyle = {
@@ -117,13 +127,15 @@ export default function SpotlightBackground() {
     maskImage: `radial-gradient(circle at ${maskX}px ${maskY}px, 
       black 0px, black ${radius}px, transparent ${radius + (MAX_FADE * radius) / INNER_RADIUS}px)`,
     opacity: isInBounds ? 1 : 0,
-    transition: isInBounds ? 'opacity 0.1s ease-in' : 'opacity 0.5s ease-out',
+    transition: isInBounds
+      ? `opacity ${QUICK_TRANSITION} ease-in`
+      : `opacity ${SLOW_TRANSITION} ease-out`,
   }
 
   return (
     <div ref={containerRef} className="absolute inset-0 overflow-hidden">
       <img
-        className="pointer-events-none absolute top-1/2 left-1/2 object-cover blur-lg"
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[120%] w-[120%] object-cover blur-lg"
         style={blurredStyle}
         src="/flower.png"
         alt="Hero Image Blurred"
@@ -131,7 +143,7 @@ export default function SpotlightBackground() {
 
       <div className="pointer-events-none absolute inset-0" style={maskStyle}>
         <img
-          className="pointer-events-none absolute top-1/2 left-1/2 object-cover"
+          className="pointer-events-none absolute top-1/2 left-1/2 h-[120%] w-[120%] object-cover"
           style={sharpStyle}
           src="/flower.png"
           alt="Hero Image Sharp"
