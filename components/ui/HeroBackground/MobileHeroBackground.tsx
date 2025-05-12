@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 
-export default function MobileSpotlightBackground() {
+export default function MobileHeroBackground() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isSharp, setIsSharp] = useState(false)
 

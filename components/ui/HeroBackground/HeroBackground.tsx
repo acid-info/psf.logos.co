@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useContainerDimensions } from '../../../hooks/useContainerDimensions'
 
-export default function SpotlightBackground() {
+export default function HeroBackground() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [coords, setCoords] = useState({ x: -9999, y: -9999 })
   const dimensions = useContainerDimensions(containerRef)

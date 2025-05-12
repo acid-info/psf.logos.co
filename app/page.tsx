@@ -1,7 +1,7 @@
 'use client'
 
-import SpotlightBackground from '../components/ui/SpotlightBackground/SpotlightBackground'
-import MobileSpotlightBackground from '../components/ui/SpotlightBackground/MobileSpotlightBackground'
+import HeroBackground from '../components/ui/HeroBackground/HeroBackground'
+import MobileHeroBackground from '../components/ui/HeroBackground/MobileHeroBackground'
 import { useIsMobile } from '../hooks/useIsMobile'
 
 const MOBILE_BREAKPOINT = 769
@@ -13,7 +13,7 @@ export default function Page() {
     <div className="flex min-h-screen flex-col bg-white">
       <section className="h-screen w-full bg-black">
         <div className="relative flex h-full w-full flex-col items-center overflow-hidden pt-2">
-          {isMobile ? <MobileSpotlightBackground /> : <SpotlightBackground />}
+          {isMobile ? <MobileHeroBackground /> : <HeroBackground />}
 
           <nav className="relative z-10 inline-flex h-11 items-center bg-[#00000033] backdrop-blur-[16.5px]">
             <a
