@@ -10,8 +10,8 @@ export default function Page() {
   const isMobile = useIsMobile(MOBILE_BREAKPOINT)
 
   return (
-    <div className="flex min-h-screen flex-col bg-white">
-      <section className="h-screen w-full bg-black">
+    <div className="flex h-[100dvh] w-screen flex-col bg-white">
+      <section className="h-full w-full bg-black">
         <div className="relative flex h-full w-full flex-col items-center overflow-hidden pt-2">
           {isMobile ? <MobileHeroBackground /> : <HeroBackground />}
 
