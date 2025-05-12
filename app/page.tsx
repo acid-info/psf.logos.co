@@ -14,7 +14,7 @@ export default function Page() {
         <div className="relative flex h-full w-full flex-col items-center overflow-hidden pt-2">
           <HeroBackground isMobile={isMobile} />
 
-          <nav className="relative z-10 inline-flex h-11 items-center bg-[#00000033] backdrop-blur-[16.5px]">
+          <nav className="relative z-10 inline-flex h-11 items-center bg-[#00000035] backdrop-blur-[16.5px]">
             <a
               href="https://psc.logos.co/"
               target="_blank"
