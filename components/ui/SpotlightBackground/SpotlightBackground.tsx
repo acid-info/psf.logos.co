@@ -1,11 +1,12 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { useContainerDimensions } from '../../../hooks/useContainerDimensions'
 
 export default function SpotlightBackground() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [coords, setCoords] = useState({ x: -9999, y: -9999 })
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+  const dimensions = useContainerDimensions(containerRef)
   const [isInBounds, setIsInBounds] = useState(false)
 
   // Constants for radius values
@@ -25,18 +26,6 @@ export default function SpotlightBackground() {
   const animFrame = useRef<number | undefined>(undefined)
 
   useEffect(() => {
-    if (containerRef.current) {
-      const { width, height } = containerRef.current.getBoundingClientRect()
-      setDimensions({ width, height })
-    }
-
-    const handleResize = () => {
-      if (containerRef.current) {
-        const { width, height } = containerRef.current.getBoundingClientRect()
-        setDimensions({ width, height })
-      }
-    }
-
     const handleMouseMove = (e) => {
       if (!containerRef.current) return
       const rect = containerRef.current.getBoundingClientRect()
@@ -58,11 +47,9 @@ export default function SpotlightBackground() {
       }
     }
 
-    window.addEventListener('resize', handleResize)
     window.addEventListener('mousemove', handleMouseMove)
 
     return () => {
-      window.removeEventListener('resize', handleResize)
       window.removeEventListener('mousemove', handleMouseMove)
 
       if (shrinkTimeout.current) clearTimeout(shrinkTimeout.current)
