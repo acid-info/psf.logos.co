@@ -45,9 +45,9 @@ export default function Page() {
             </a>
           </nav>
 
-          <div className="z-10 flex flex-1 flex-col items-center sm:justify-between">
-            <div className="flex flex-1 flex-col items-center justify-center sm:gap-10">
-              <div className="relative mt-auto flex flex-col items-center gap-[32px] px-6 sm:mt-0 sm:gap-10">
+          <div className="z-10 flex flex-1 flex-col items-center justify-between">
+            <div className="flex flex-1 flex-col items-center justify-center gap-8 sm:gap-10">
+              <div className="relative mt-0 flex flex-col items-center gap-[24px] px-6 sm:gap-10">
                 <img
                   className="h-[51.45px] w-[49.65px] sm:h-[75.45px] sm:w-[72.81px]"
                   alt="Subtract"
@@ -66,7 +66,7 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="relative mt-auto sm:mt-0">
+              <div className="relative mt-0">
                 <a
                   href="https://lu.ma/psf"
                   target="_blank"
@@ -84,7 +84,7 @@ export default function Page() {
             </div>
 
             <div className="relative mt-[32px] mb-6 sm:mt-0">
-              <div className="h-[17px] text-center text-sm leading-[16.8px] tracking-[-0.59px] whitespace-nowrap text-white">
+              <div className="h-[17px] text-center text-[18px] leading-[21.6px] tracking-[-0.756px] whitespace-nowrap text-white">
                 COMING Q1 2026
               </div>
             </div>
