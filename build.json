@@ -1,15 +1,15 @@
 {
-    "timestamp": "2025-05-08T16:27:56Z",
+    "timestamp": "2025-05-13T12:34:05Z",
     "git": {
-        "commit": "15679e08dcd84d87941229c73ef3392dc0909c92",
+        "commit": "d987ccff23ba777320e0c9a44191ae75ea736474",
         "branch": "origin/master",
         "url": "git@github.com:acid-info/psf.logos.co"
     },
     "build": {
-        "id": "12",
-        "number": "12",
+        "id": "13",
+        "number": "13",
         "name": "website/psf.logos.co",
         "slave": "linux-02",
-        "url": "https://ci.infra.status.im/job/website/job/psf.logos.co/12/"
+        "url": "https://ci.infra.status.im/job/website/job/psf.logos.co/13/"
     }
 }
