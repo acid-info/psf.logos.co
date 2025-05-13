@@ -1,25 +1,13 @@
-export default async function Page() {
+import HeroBackground from '../components/ui/HeroBackground/HeroBackground'
+
+export default function Page() {
   return (
-    <div className="flex min-h-screen flex-col bg-white">
-      <section className="h-screen w-full bg-black">
+    <div className="flex h-[100svh] w-[100svw] flex-col bg-white md:h-[100lvh] md:w-[100lvw]">
+      <section className="h-full w-full bg-black">
         <div className="relative flex h-full w-full flex-col items-center overflow-hidden pt-2">
-          <img
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover filter"
-            src="/flower.png"
-            alt="Hero Image"
-          />
+          <HeroBackground />
 
-          {/* <video
-            className="absolute inset-0 z-0 h-full w-full scale-[1.1] object-cover blur-[22px] filter"
-            src="/hero-video.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/hero-image.png"
-          /> */}
-
-          <nav className="relative inline-flex h-11 items-center bg-[#00000033] backdrop-blur-[16.5px]">
+          <nav className="relative z-10 inline-flex h-11 items-center bg-[#00000035] backdrop-blur-[16.5px]">
             <a
               href="https://psc.logos.co/"
               target="_blank"
@@ -57,9 +45,9 @@ export default async function Page() {
             </a>
           </nav>
 
-          <div className="flex flex-1 flex-col items-center sm:justify-between">
-            <div className="flex flex-1 flex-col items-center justify-center sm:gap-12">
-              <div className="relative mt-auto flex flex-col items-center gap-[32px] px-6 sm:mt-0 sm:gap-12">
+          <div className="z-10 flex flex-1 flex-col items-center justify-between">
+            <div className="flex flex-1 flex-col items-center justify-center gap-8 sm:gap-10">
+              <div className="relative mt-0 flex flex-col items-center gap-[24px] px-6 sm:gap-10">
                 <img
                   className="h-[51.45px] w-[49.65px] sm:h-[75.45px] sm:w-[72.81px]"
                   alt="Subtract"
@@ -78,7 +66,7 @@ export default async function Page() {
                 </div>
               </div>
 
-              <div className="relative mt-auto sm:mt-0">
+              <div className="relative mt-0">
                 <a
                   href="https://lu.ma/psf"
                   target="_blank"
@@ -86,8 +74,8 @@ export default async function Page() {
                   data-umami-event-section="hero"
                   data-umami-event-element="button"
                 >
-                  <button className="cursor-pointer bg-[#0000003d] px-6 py-4 backdrop-blur-md hover:bg-[#00000060]">
-                    <span className="inline-block text-[18px] leading-[21.6px] tracking-[-0.76px] text-white">
+                  <button className="cursor-pointer bg-[#FFF] px-6 py-4 hover:bg-[#F2F2F2]">
+                    <span className="inline-block text-[18px] leading-[21.6px] tracking-[-0.76px] text-black">
                       RSVP
                     </span>
                   </button>
@@ -96,7 +84,7 @@ export default async function Page() {
             </div>
 
             <div className="relative mt-[32px] mb-6 sm:mt-0">
-              <div className="h-[17px] text-center text-sm leading-[16.8px] tracking-[-0.59px] whitespace-nowrap text-white">
+              <div className="h-[17px] text-center text-[16px] leading-[19.2px] tracking-[-0.672px] whitespace-nowrap text-white sm:text-[18px] sm:leading-[21.6px] sm:tracking-[-0.756px]">
                 COMING Q1 2026
               </div>
             </div>
