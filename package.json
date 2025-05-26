@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@acid-info/lsd-react": "link:../lsd/packages/lsd-react",
     "@next/bundle-analyzer": "15.2.4",
     "@radix-ui/react-separator": "^1.1.4",
     "@radix-ui/react-slot": "^1.2.0",
@@ -23,6 +24,7 @@
     "clsx": "^2.1.1",
     "esbuild": "0.25.2",
     "image-size": "2.0.1",
+    "lsd": "link:../../../Library/pnpm/global/5/node_modules/lsd",
     "lucide-react": "^0.503.0",
     "next": "15.2.4",
     "postcss": "^8.4.24",
@@ -62,5 +64,11 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
     ]
+  },
+  "pnpm": {
+    "overrides": {
+      "lsd": "link:../../../Library/pnpm/global/5/node_modules/lsd",
+      "@acid-info/lsd-react": "link:../lsd/packages/lsd-react"
+    }
   }
 }

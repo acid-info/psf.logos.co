@@ -1,21 +1,7 @@
-import 'css/tailwind.css'
-import localFont from 'next/font/local'
-import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { Metadata } from 'next'
 import Script from 'next/script'
-
-const spaceMono = localFont({
-  src: '../public/fonts/SpaceMono-Regular.ttf',
-  display: 'swap',
-  variable: '--font-space-mono',
-})
-
-const spaceGrotesk = localFont({
-  src: '../public/fonts/SpaceGrotesk-Regular.ttf',
-  display: 'swap',
-  variable: '--font-space-grotesk',
-})
+import { CSSBaseline, defaultThemes } from '@acid-info/lsd-react'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -63,19 +49,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang={siteMetadata.language}
-      className={`scroll-smooth ${spaceMono.className} ${spaceGrotesk.className}`}
-      suppressHydrationWarning
-    >
+    <html lang={siteMetadata.language} suppressHydrationWarning>
       <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico" />
       <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
-      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
-      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
+
+      <head>
+        <style>{defaultThemes.light.globalStyles}</style>
+        <CSSBaseline />
+      </head>
+      <body>
         <main className="mb-auto">{children}</main>
-        <Footer />
         <Script
           strategy="afterInteractive"
           src="https://umami.bi.status.im/script.js"
