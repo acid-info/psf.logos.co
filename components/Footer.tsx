@@ -63,6 +63,9 @@ export default function Footer() {
     }
   }
 
+  const footerLinkGroupClasses =
+    'flex flex-col items-center justify-center text-sm leading-[16.8px] tracking-[-0.59px] text-black'
+
   return (
     <footer className="relative w-full bg-white px-4 pb-6 sm:pb-4">
       <form
@@ -107,7 +110,7 @@ export default function Footer() {
       )}
 
       <div className="flex w-full flex-col items-center justify-center gap-11 sm:flex-row sm:items-stretch sm:justify-between sm:gap-0">
-        <div className="flex flex-col items-center justify-center text-sm leading-[16.8px] tracking-[-0.59px] text-black sm:items-start">
+        <div className={`${footerLinkGroupClasses} sm:items-start`}>
           <span>PSF-2026</span>
           <span>
             BUILT BY{' '}
@@ -122,7 +125,7 @@ export default function Footer() {
             </a>
           </span>
         </div>
-        <div className="flex flex-col items-center justify-center text-sm leading-[16.8px] tracking-[-0.59px] text-black sm:justify-end">
+        <div className={`${footerLinkGroupClasses} sm:justify-end`}>
           <a
             className="flex items-center justify-center gap-2"
             href="https://form.jotform.com/251343955577063"
@@ -135,7 +138,7 @@ export default function Footer() {
             <ArrowRight />
           </a>
         </div>
-        <div className="flex flex-col items-center justify-center text-sm leading-[16.8px] tracking-[-0.59px] text-black sm:items-end">
+        <div className={`${footerLinkGroupClasses} sm:items-end`}>
           <a href="https://logos.co/terms" target="_blank" className="block">
             TERMS OF USE
           </a>
