@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Button } from './ui/button'
+import { ArrowRight } from './icons/arrow-right'
 
 export default function Footer() {
   const [formState, setFormState] = useState({ email: '', name: '' })
@@ -62,12 +63,15 @@ export default function Footer() {
     }
   }
 
+  const footerLinkGroupClasses =
+    'flex flex-col items-center justify-center text-sm leading-[16.8px] tracking-[-0.59px] text-black'
+
   return (
-    <footer className="relative w-full bg-white px-4">
+    <footer className="relative w-full bg-white px-4 pb-6 sm:pb-4">
       <form
         id="form"
         onSubmit={handleSubmit}
-        className="mx-auto my-[117px] flex w-full max-w-[628px] flex-col items-stretch gap-2 sm:my-[145px] sm:flex-row"
+        className="mx-auto mt-[141px] mb-[189px] flex w-full max-w-[628px] flex-col items-stretch gap-2 sm:mt-[164px] sm:mb-[206px] sm:flex-row"
       >
         <div className="relative flex flex-1 items-center gap-2 border-b border-black p-4">
           <input
@@ -105,42 +109,44 @@ export default function Footer() {
         </p>
       )}
 
-      <div className="flex flex-col-reverse items-center gap-[40px] pt-12 pb-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6 sm:pt-0">
-        <div className="text-center text-sm leading-[16.8px] tracking-[-0.59px] text-black sm:text-left">
-          PARALLEL SOCIETY FESTIVAL
-          <br />
-          2026
+      <div className="flex w-full flex-col items-center justify-center gap-11 sm:flex-row sm:items-stretch sm:justify-between sm:gap-0">
+        <div className={`${footerLinkGroupClasses} sm:items-start`}>
+          <span>PSF-2026</span>
+          <span>
+            BUILT BY{' '}
+            <a className="underline" href="https://free.technology/" target="_blank">
+              IFT
+            </a>
+          </span>
+          <span>
+            ORGANISED BY{' '}
+            <a className="underline" href="https://logos.co/" target="_blank">
+              LOGOS
+            </a>
+          </span>
         </div>
-
-        <div className="text-sm leading-[16.8px] tracking-[-0.59px] text-black">
-          <a href="https://logos.co/terms" target="_blank" className="block text-center">
+        <div className={`${footerLinkGroupClasses} sm:justify-end`}>
+          <a
+            className="flex items-center justify-center gap-2"
+            href="https://form.jotform.com/251343955577063"
+            target="_blank"
+            data-umami-event="volunteer"
+            data-umami-event-section="footer"
+            data-umami-event-element="link"
+          >
+            <span>VOLUNTEER TO PSF</span>
+            <ArrowRight />
+          </a>
+        </div>
+        <div className={`${footerLinkGroupClasses} sm:items-end`}>
+          <a href="https://logos.co/terms" target="_blank" className="block">
             TERMS OF USE
           </a>
-          <a
-            href="https://logos.co/privacy-policy"
-            target="_blank"
-            className="block text-center text-black"
-          >
+          <a href="https://logos.co/privacy-policy" target="_blank" className="block text-black">
             PRIVACY POLICY
           </a>
-          <a
-            href="https://logos.co/security"
-            target="_blank"
-            className="block text-center text-black"
-          >
+          <a href="https://logos.co/security" target="_blank" className="block text-black">
             SECURITY
-          </a>
-        </div>
-
-        <div className="text-center text-sm leading-[16.8px] tracking-[-0.59px] text-black sm:text-right">
-          BUILT BY{' '}
-          <a className="underline" href="https://free.technology/" target="_blank">
-            IFT
-          </a>
-          <br />
-          ORGANISED BY{' '}
-          <a className="underline" href="https://logos.co/" target="_blank">
-            LOGOS
           </a>
         </div>
       </div>
