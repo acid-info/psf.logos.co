@@ -68,7 +68,7 @@ export default function Page() {
 
               <div className="relative mt-0">
                 <a
-                  href="https://lu.ma/psf"
+                  href="http://lu.ma/psf?utm_source=website"
                   target="_blank"
                   data-umami-event="rsvp"
                   data-umami-event-section="hero"
