@@ -134,7 +134,7 @@ export default function Footer() {
             data-umami-event-section="footer"
             data-umami-event-element="link"
           >
-            <span>VOLUNTEER TO PSF</span>
+            <span>BECOME A VOLUNTEER</span>
             <ArrowRight />
           </a>
         </div>

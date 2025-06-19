@@ -85,7 +85,7 @@ export default function Page() {
 
             <div className="relative mt-[32px] mb-6 sm:mt-0">
               <div className="h-[17px] text-center text-[16px] leading-[19.2px] tracking-[-0.672px] whitespace-nowrap text-white sm:text-[18px] sm:leading-[21.6px] sm:tracking-[-0.756px]">
-                COMING Q1 2026
+                LISBON, MARCH 2026
               </div>
             </div>
           </div>
