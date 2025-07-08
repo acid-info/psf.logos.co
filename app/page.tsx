@@ -76,7 +76,7 @@ export default function Page() {
                 >
                   <button className="cursor-pointer bg-[#FFF] px-6 py-4 hover:bg-[#F2F2F2]">
                     <span className="inline-block text-[18px] leading-[21.6px] tracking-[-0.76px] text-black">
-                      RSVP
+                      CLAIM YOUR SPOT
                     </span>
                   </button>
                 </a>
