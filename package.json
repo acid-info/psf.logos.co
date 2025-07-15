@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@acid-info/lsd-react": "0.2.0-topic-refactor-lsd-1.0",
     "@next/bundle-analyzer": "15.2.4",
     "@radix-ui/react-separator": "^1.1.4",
     "@radix-ui/react-slot": "^1.2.0",
