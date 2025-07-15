@@ -1,9 +1,10 @@
 import HeroBackground from '../components/ui/HeroBackground/HeroBackground'
+import { Button } from '@acid-info/lsd-react/client/Button'
 
 export default function Page() {
   return (
     <div className="flex h-[100svh] w-[100svw] flex-col bg-white md:h-[100lvh] md:w-[100lvw]">
-      <section className="h-full w-full bg-black">
+      <section className="h-full w-full bg-black" data-theme="dark">
         <div className="relative flex h-full w-full flex-col items-center overflow-hidden pt-2">
           <HeroBackground />
 
@@ -74,11 +75,9 @@ export default function Page() {
                   data-umami-event-section="hero"
                   data-umami-event-element="button"
                 >
-                  <button className="cursor-pointer bg-[#FFF] px-6 py-4 hover:bg-[#F2F2F2]">
-                    <span className="inline-block text-[18px] leading-[21.6px] tracking-[-0.76px] text-black">
-                      CLAIM YOUR SPOT
-                    </span>
-                  </button>
+                  <Button size="large" variant="filled">
+                    CLAIM YOUR SPOT
+                  </Button>
                 </a>
               </div>
             </div>

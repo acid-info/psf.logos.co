@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Button } from './ui/button'
 import { ArrowRight } from './icons/arrow-right'
+import { Button } from '@acid-info/lsd-react/client/Button'
 
 export default function Footer() {
   const [formState, setFormState] = useState({ email: '', name: '' })
@@ -67,7 +67,7 @@ export default function Footer() {
     'flex flex-col items-center justify-center text-sm leading-[16.8px] tracking-[-0.59px] text-black'
 
   return (
-    <footer className="relative w-full bg-white px-4 pb-6 sm:pb-4">
+    <footer className="relative w-full bg-white px-4 pb-6 sm:pb-4" data-theme="light">
       <form
         id="form"
         onSubmit={handleSubmit}
@@ -93,13 +93,13 @@ export default function Footer() {
         </div>
 
         <Button
+          variant="filled"
           type="submit"
-          className="mt-6 h-full w-fit cursor-pointer rounded-none bg-black px-6 py-4 text-white hover:bg-black/80 sm:mt-0"
           data-umami-event="co-organise"
           data-umami-event-section="footer"
           data-umami-event-element="button"
         >
-          <span className="text-sm leading-[16.8px] tracking-[-0.59px]">CO-ORGANISE</span>
+          CO-ORGANISE
         </Button>
       </form>
 
